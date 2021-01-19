@@ -11,6 +11,7 @@ public class ReadObject {
                 System.out.println("=====执行数据过滤=====");
                 ObjectInputFilter serialFilter = ObjectInputFilter.Config.getSerialFilter();
                 if (serialFilter != null) {
+                    //ObjectInputFilter执行默认检查
                     ObjectInputFilter.Status status = serialFilter.checkInput(info);
                     //如果默认检查的结果不是Status.UNDECIDED
                     if (status != ObjectInputFilter.Status.UNDECIDED) {
