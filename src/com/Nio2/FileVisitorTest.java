@@ -15,7 +15,7 @@ public class FileVisitorTest {
                     @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                         System.out.println("正在访问" + file + "文件");
-                        //找到了FileVistorTest.java文件
+                        //找到了FileVistorTest.java文件,则程序停止遍历
                         if (file.endsWith("FileVisitorTest.java")) {
                             System.out.println("已经找到目标文件");
                             return FileVisitResult.TERMINATE;
